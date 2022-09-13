@@ -1,0 +1,44 @@
+{
+    "cli": true,
+    "target": "directory",
+    "adapterName": "shutter-control",
+    "title": "Shutter Control",
+    "description": "The different shutters will be closed or opend dependend on the position of the sun",
+    "keywords": [
+        "shelly",
+        "shutter",
+        "mqtt"
+    ],
+    "expert": "no",
+    "features": [
+        "adapter"
+    ],
+    "adminFeatures": [],
+    "type": "iot-systems",
+    "startMode": "daemon",
+    "connectionType": "local",
+    "dataSource": "push",
+    "connectionIndicator": "no",
+    "language": "JavaScript",
+    "nodeVersion": "14",
+    "adminUi": "react",
+    "tools": [
+        "ESLint",
+        "type checking"
+    ],
+    "releaseScript": "yes",
+    "devServer": "yes",
+    "devServerPort": 8081,
+    "indentation": "Space (4)",
+    "quotes": "double",
+    "es6class": "yes",
+    "authorName": "eckhulz",
+    "authorGithub": "Bastler_081",
+    "authorEmail": "eckhulz@gmail.com",
+    "gitRemoteProtocol": "HTTPS",
+    "gitCommit": "no",
+    "defaultBranch": "main",
+    "license": "MIT License",
+    "dependabot": "no",
+    "creatorVersion": "2.2.1"
+}

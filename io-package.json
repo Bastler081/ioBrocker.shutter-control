@@ -1,0 +1,86 @@
+{
+    "common": {
+        "name": "shutter-control",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "Shutter Control",
+        "titleLang": {
+            "en": "Shutter Control",
+            "de": "Verschlusssteuerung",
+            "ru": "Управление затвором",
+            "pt": "Controle do obturador",
+            "nl": "Sluiterbediening",
+            "fr": "Contrôle de l'obturateur",
+            "it": "Controllo dell'otturatore",
+            "es": "Control de obturador",
+            "pl": "Sterowanie migawką",
+            "zh-cn": "快门控制"
+        },
+        "desc": {
+            "en": "The different shutters will be closed or opend dependend on the position of the sun",
+            "de": "Je nach Sonnenstand werden die verschiedenen Rollläden geschlossen oder geöffnet",
+            "ru": "Различные жалюзи будут закрыты или открыты в зависимости от положения солнца.",
+            "pt": "As diferentes persianas serão fechadas ou abertas dependendo da posição do sol",
+            "nl": "Afhankelijk van de stand van de zon worden de verschillende luiken gesloten of geopend",
+            "fr": "Les différents volets seront fermés ou ouverts en fonction de la position du soleil",
+            "it": "Le diverse persiane verranno chiuse o aperte a seconda della posizione del sole",
+            "es": "Las diferentes persianas se cerrarán o abrirán dependiendo de la posición del sol.",
+            "pl": "Różne rolety będą zamknięte lub otwarte w zależności od pozycji słońca",
+            "zh-cn": "不同的百叶窗将根据太阳的位置关闭或打开"
+        },
+        "authors": [
+            "eckhulz <eckhulz@gmail.com>"
+        ],
+        "keywords": [
+            "shelly",
+            "shutter",
+            "mqtt"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "shutter-control.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/Bastler_081/ioBroker.shutter-control/main/admin/shutter-control.png",
+        "readme": "https://github.com/Bastler_081/ioBroker.shutter-control/blob/main/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "iot-systems",
+        "compact": true,
+        "connectionType": "local",
+        "dataSource": "push",
+        "adminUI": {
+            "config": "materialize"
+        },
+        "eraseOnUpload": true,
+        "dependencies": [
+            {
+                "js-controller": ">=3.3.22"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.0.0"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": []
+}
