@@ -78,8 +78,9 @@
         ]
     },
     "native": {
-        "option1": true,
-        "option2": "42"
+        "ipadresse": "192.168.178.141",
+        "option1": true,  
+        "option2": "55"
     },
     "objects": [],
     "instanceObjects": []

@@ -41,6 +41,7 @@ class ShutterControl extends utils.Adapter {
         // this.config:
         this.log.info("config option1: " + this.config.option1);
         this.log.info("config option2: " + this.config.option2);
+        this.log.info("config ipadresse: " + this.config.ipadresse);
 
         /*
         For every state in the system there has to be also an object of type state
@@ -58,9 +59,21 @@ class ShutterControl extends utils.Adapter {
             },
             native: {},
         });
+        await this.setObjectNotExistsAsync("testVariable2", {
+            type: "state",
+            common: {
+                name: "testVariable2",
+                type: "boolean",
+                role: "indicator",
+                read: true,
+                write: true,
+            },
+            native: {},
+        });
 
         // In order to get state updates, you need to subscribe to them. The following line adds a subscription for our variable we have created above.
         this.subscribeStates("testVariable");
+        this.subscribeStates("testVariable2");
         // You can also add a subscription for multiple states. The following line watches all states starting with "lights."
         // this.subscribeStates("lights.*");
         // Or, if you really must, you can also watch all states. Don't do this if you don't need to. Otherwise this will cause a lot of unnecessary load on the system:
@@ -72,13 +85,16 @@ class ShutterControl extends utils.Adapter {
         */
         // the variable testVariable is set to true as command (ack=false)
         await this.setStateAsync("testVariable", true);
+        await this.setStateAsync("testVariable2", false);
 
         // same thing, but the value is flagged "ack"
         // ack should be always set to true if the value is received from or acknowledged from the target system
         await this.setStateAsync("testVariable", { val: true, ack: true });
+        await this.setStateAsync("testVariable2", { val: false, ack: true });
 
         // same thing, but the state is deleted after 30s (getState will return null afterwards)
         await this.setStateAsync("testVariable", { val: true, ack: true, expire: 30 });
+        await this.setStateAsync("testVariable2", { val: false, ack: true, expire: 20 });
 
         // examples for the checkPassword/checkGroup functions
         let result = await this.checkPasswordAsync("admin", "iobroker");
