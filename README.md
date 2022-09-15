@@ -12,7 +12,7 @@
 
 ## shutter-control adapter for ioBroker
 
-The different shutters will be closed or opend dependend on the position of the sun
+The different shutters will be closed or opend dependend on the position of the sun.
 
 ## Developer manual
 This section is intended for the developer. It can be deleted later.
