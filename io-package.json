@@ -19,7 +19,7 @@
         "title": "Shutter Control",
         "titleLang": {
             "en": "Shutter Control",
-            "de": "Verschlusssteuerung",
+            "de": "Rolladenssteuerung",
             "ru": "Управление затвором",
             "pt": "Controle do obturador",
             "nl": "Sluiterbediening",
@@ -63,7 +63,7 @@
         "connectionType": "local",
         "dataSource": "push",
         "adminUI": {
-            "config": "materialize"
+            "config": "json"
         },
         "eraseOnUpload": true,
         "dependencies": [
@@ -78,10 +78,77 @@
         ]
     },
     "native": {
-        "ipadresse": "192.168.178.141",
-        "option1": true,  
-        "option2": "55"
+        "serverIp": "192.168.178.000",
+        "serverport": 443
     },
     "objects": [],
-    "instanceObjects": []
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type":"channel",
+            "common": {
+                "name":"information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type":"state",
+            "common": {
+                "name":"Device or service connected",
+                "role":"indicator.connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native":{}
+        },
+        {
+            "_id": "deviceInfo",
+            "type":"channel",
+            "common": {
+                "name": {
+                      "en": "Device Information",
+                      "de": "Geräteinformation",
+                      "ru": "Информация об устройстве",
+                      "pt": "InformaÃ§Ã£o do dispositivo",
+                      "nl": "Device Informatie",
+                      "fr": "Information sur les dispositifs",
+                      "it": "Informazioni sul dispositivo",
+                      "es": "Información sobre dispositivos",
+                      "pl": "Device Information",
+                      "zh-cn": "证人信息"
+                    }
+            },
+            "native": {}
+        },
+        {
+            "_id": "deviceInfo.name",
+            "type":"state",
+            "common": {
+                "name": {
+                
+                      "en": "Device name",
+                      "de": "Bezeichnung des Geräts",
+                      "ru": "Наименование устройства",
+                      "pt": "Nome do dispositivo",
+                      "nl": "Devicenaam",
+                      "fr": "Nom du dispositif",
+                      "it": "Nome del dispositivo",
+                      "es": "Nombre del dispositivo",
+                      "pl": "Device name",
+                      "zh-cn": "证人姓名"
+                },
+                  
+                "role":"text",
+                "type": "string",
+                "read": true,
+                "write": false
+            },
+            "native":{}
+        }
+
+        
+    ]   
 }
